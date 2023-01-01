@@ -1,0 +1,306 @@
+<xq-include file="./partials/header.html" title="xq-tab-form演示页面"></xq-include>
+    <div class="container">
+        <div class="row justify-content-center mt-3">
+            <div class="card  p-0">
+                <div class="card-header">
+                    安装与使用
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>npm i xq-tab-form</p>
+                        <p>在typescript代码或javascript代码中引入后使用</p>
+                        <p>import xqTabForm from 'xq-tab-form';</p>
+                        <p>导入后在相应的表单添加class="xq-tab-form"的属性就可以自动运行</p>
+                        <p class="link-danger">同时在相应的页面得引入bootstrap相关的css和js文件</p>
+                    </blockquote>
+                </div>
+                <div class="card-footer">
+                    <a href="https://www.npmjs.com/package/xq-tab-form" target="_blank" type="button" class="btn btn-primary">
+                        查看npm包信息
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="card p-0">
+                <div class="card-header">
+                    示例代码
+                </div>
+                <div class="card-body">
+                    <pre class="mb-0">
+<code>
+&lt;form name="tab_form" <span class="link-danger">class="xq-tab-form" </span>method="post"&gt;
+
+&lt;ul class="nav nav-tabs" role="tablist" id="tab_form_tab"&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;a type="button" class="nav-link active" id="tab_1_list" 
+        data-bs-toggle="tab" data-bs-target="#tab_1" role="tab" 
+        aria-controls="tab_1" aria-selected="true"&gt;网站基本信息&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="nav-item" role="presentation"&gt;
+        &lt;a type="button" class="nav-link" id="tab_2_list" 
+        data-bs-toggle="tab" data-bs-target="#tab_2" role="tab" 
+        aria-controls="tab_2" aria-selected="false"&gt;SEO信息&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tab_form_tab_tab_content"&gt;
+
+    &lt;div class="tab-pane fade active show" id="tab_1" 
+    role="tabpanel" aria-labelledby="tab_1_list"&gt;
+        &lt;div class="form-group row"&gt;
+            &lt;label class="col-2 col-form-label text-end"&gt;网站名称&lt;/label&gt;
+            &lt;div class="col-4"&gt;
+                &lt;input type="text" id="site_name" name="site_name" 
+                class="form-control" required="1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group row"&gt;
+            &lt;label class="col-2 col-form-label text-end"&gt;网站域名&lt;/label&gt;
+            &lt;div class="col-4"&gt;
+                &lt;input type="text" id="site_domain" name="site_domain" 
+                class="form-control" required="1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tab-pane fade" id="tab_2" role="tabpanel" 
+    aria-labelledby="tab_2_list"&gt;
+        &lt;div class="form-group row"&gt;
+            &lt;label class="col-2 col-form-label text-end"&gt;网站标题&lt;/label&gt;
+            &lt;div class="col-4"&gt;
+                &lt;input type="text" id="seo_title" name="seo_title"
+                    class="form-control" required="1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group row"&gt;
+            &lt;label class="col-2 col-form-label text-end"&gt;网站关键字&lt;/label&gt;
+            &lt;div class="col-4"&gt;
+                &lt;input type="text" id="seo_keyword" name="seo_keyword" 
+                class="form-control" required="1"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group row"&gt;
+            &lt;label class="col-2 col-form-label text-end"&gt;网站描述&lt;/label&gt;
+            &lt;div class="col-4"&gt;
+                &lt;textarea id="seo_desc" name="seo_desc" class="form-control"
+                    required="1" rows="8" cols="30"&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="form-group row"&gt;
+    &lt;div class="col-4 text-end"&gt;
+        &lt;input type="submit" id="submit" value="确定" class="btn btn-primary" 
+        style="width:100px;margin-bottom:1rem;"/&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4 text-start"&gt;
+        &lt;input type="reset" id="reset" name="reset" value="重置" 
+        class="btn btn-secondary" style="width:100px;margin-bottom:1rem;"/&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    
+&lt;/form&gt;
+</code></pre>
+                </div>
+            </div>
+        </div>  
+         
+        <div class="row justify-content-center  mt-3">
+            <div class="card p-0">
+                <div class="card-header">
+                    备注说明
+                </div>
+                <div class="card-body">
+                    <p class="link-danger">未启用xq-tab-form，填写“网站名称”和“网站域名”后提交，没有任何提示！</p>
+                    <p class="link-danger">在相应的表单标签添加class="xq-tab-form"可以自动启用xq-tab-form</p>
+                    <p class="link-danger">启用xq-tab-form，填写“网站名称”和“网站域名”后提交，会自动切换Tab标签，并显示表单验证提示信息！</p>
+
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+            <div class="row justify-content-center  mt-3">
+                <div class="card p-0">
+                    <div class="card-header">
+                        启用xq-tab-form后的运行效果
+                    </div>
+                    <div class="card-body">
+
+                        <form name="tab_form" class="xq-tab-form" method="post">
+
+                            <ul class="nav nav-tabs" role="tablist" id="tab_form_tab">
+                                <li class="nav-item" role="presentation">
+                                    <a type="button" class="nav-link active" id="tab_1_list" 
+                                    data-bs-toggle="tab" data-bs-target="#tab_1" role="tab" 
+                                    aria-controls="tab_1" aria-selected="true">网站基本信息</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a type="button" class="nav-link" id="tab_2_list" 
+                                    data-bs-toggle="tab" data-bs-target="#tab_2" role="tab" 
+                                    aria-controls="tab_2" aria-selected="false">SEO信息</a>
+                                </li>
+                            </ul>
+                        
+                            <div class="tab-content" id="tab_form_tab_tab_content">
+                        
+                                <div class="tab-pane fade active show" id="tab_1" 
+                                role="tabpanel" aria-labelledby="tab_1_list">
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站名称</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="site_name" name="site_name" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站域名</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="site_domain" name="site_domain" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="tab-pane fade" id="tab_2" role="tabpanel" 
+                                aria-labelledby="tab_2_list">
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站标题</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="seo_title" name="seo_title"
+                                             class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站关键字</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="seo_keyword" name="seo_keyword" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站描述</label>
+                                        <div class="col-8 col-lg-6">
+                                            <textarea id="seo_desc" name="seo_desc" class="form-control"
+                                             required="1" rows="3" cols="30"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        
+                            <div class="form-group row">
+                                <div class="col-4 text-end">
+                                    <input type="submit" id="submit" value="确定" class="btn btn-primary" 
+                                    style="width:100px;margin-bottom:1rem;"/>
+                                </div>
+                                <div class="col-4 text-start">
+                                    <input type="reset" id="reset" name="reset" value="重置" 
+                                    class="btn btn-secondary" style="width:100px;margin-bottom:1rem;"/>
+                                </div>
+                            </div>
+                            
+                        </form>
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="row justify-content-center  mt-3">
+                <div class="card p-0">
+                    <div class="card-header">
+                        未启用xq-tab-form的运行效果
+                    </div>
+                    <div class="card-body">
+                        
+                        <form method="post">
+
+                            <ul class="nav nav-tabs" role="tablist" id="tab_form_tab2">
+                                <li class="nav-item" role="presentation">
+                                    <a type="button" class="nav-link active" id="tab_1_list2" 
+                                    data-bs-toggle="tab" data-bs-target="#tab_12" role="tab" 
+                                    aria-controls="tab_12" aria-selected="true">网站基本信息</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a type="button" class="nav-link" id="tab_2_list2" 
+                                    data-bs-toggle="tab" data-bs-target="#tab_22" role="tab" 
+                                    aria-controls="tab_22" aria-selected="false">SEO信息</a>
+                                </li>
+                            </ul>
+                        
+                            <div class="tab-content" id="tab_form_tab2_tab_content">
+                        
+                                <div class="tab-pane fade active show" id="tab_12" 
+                                role="tabpanel" aria-labelledby="tab_1_list2">
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站名称</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="site_name" name="site_name" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站域名</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="site_domain" name="site_domain" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div class="tab-pane fade" id="tab_22" role="tabpanel" 
+                                aria-labelledby="tab_2_list2">
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站标题</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="seo_title" name="seo_title"
+                                             class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站关键字</label>
+                                        <div class="col-8 col-lg-6">
+                                            <input type="text" id="seo_keyword" name="seo_keyword" 
+                                            class="form-control" required="1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-4 col-lg-3 col-form-label text-end">网站描述</label>
+                                        <div class="col-8 col-lg-6">
+                                            <textarea id="seo_desc" name="seo_desc" class="form-control"
+                                             required="1" rows="3" cols="30"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        
+                            <div class="form-group row">
+                                <div class="col-4 text-end">
+                                    <input type="submit" id="submit" value="确定" class="btn btn-primary" 
+                                    style="width:100px;margin-bottom:1rem;"/>
+                                </div>
+                                <div class="col-4 text-start">
+                                    <input type="reset" id="reset" name="reset" value="重置" 
+                                    class="btn btn-secondary" style="width:100px;margin-bottom:1rem;"/>
+                                </div>
+                            </div>
+                            
+                        </form>
+
+                    </div>
+                    
+                </div>
+            </div>
+           
+        
+    </div>
+    <p>&nbsp;</p>
+   
+<xq-include file="./partials/footer.html"></xq-include>
