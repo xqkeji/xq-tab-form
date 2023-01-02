@@ -38,17 +38,17 @@
 	"homepage": "https://xqkeji.cn/demo/xq-tab-form/",
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"bootstrap": "^5.2.2"
+		"bootstrap": "^5.2.3"
 	},
 	"devDependencies": {
-		"@types/bootstrap": "^5.2.5",
-		"@types/node": "^18.11.0",
-		"sass": "^1.55.0",
-		"typescript": "^4.8.4",
-		"unbuild": "^0.9.4",
-		"vite": "^3.2.0",
+		"@types/bootstrap": "^5.2.6",
+		"@types/node": "^18.11.18",
+		"sass": "^1.57.1",
+		"typescript": "^4.9.4",
+		"unbuild": "^1.0.2",
+		"vite": "^4.0.3",
 		"vite-plugin-xq-cp-dep": "^1.0.3",
-		"vite-plugin-xq-include": "^1.0.2",
-		"xq-banner": "^1.0.5"
+		"vite-plugin-xq-include": "^1.0.18",
+		"xq-banner": "^1.0.7"
 	}
 }
