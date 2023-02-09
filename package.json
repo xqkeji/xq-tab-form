@@ -1,6 +1,6 @@
 {
 	"name": "xq-tab-form",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "一个基于Bootstrap5的Tab标签页的小组件，能让HTML5表单验证的提示信息在Bootstrap5的Tab标签页能正常显示。",
 	"files": [
 		"dist"
@@ -19,8 +19,8 @@
 		"dev": "vite serve src/",
 		"html": "vite build src/",
 		"build": "npx unbuild && npm run convert && npm run min && npx xq-banner",
-		"convert":"rollup ./dist/index.cjs --format iife --file ./dist/xq-tab-form.js",
-		"min":"uglifyjs ./dist/xq-tab-form.js -m -o ./dist/xq-tab-form.min.js"
+		"convert": "rollup ./dist/index.cjs --format iife --file ./dist/xq-tab-form.js",
+		"min": "uglifyjs ./dist/xq-tab-form.js -m -o ./dist/xq-tab-form.min.js"
 	},
 	"repository": {
 		"type": "git",
@@ -40,18 +40,19 @@
 	"homepage": "https://xqkeji.cn/demo/xq-tab-form/",
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"bootstrap": "^5.2.3"
+		"bootstrap": "^5.2.3",
+		"xq-util": "^1.0.1"
 	},
 	"devDependencies": {
 		"@types/bootstrap": "^5.2.6",
-		"@types/node": "^18.11.18",
-		"sass": "^1.57.1",
-		"typescript": "^4.9.4",
+		"@types/node": "^18.13.0",
+		"sass": "^1.58.0",
+		"typescript": "^4.9.5",
 		"uglify-js": "^3.17.4",
-		"unbuild": "^1.0.2",
-		"vite": "^4.0.3",
-		"vite-plugin-xq-cp-dep": "^1.0.3",
+		"unbuild": "^1.1.1",
+		"vite": "^4.1.1",
+		"vite-plugin-xq-cp-dep": "^1.0.5",
 		"vite-plugin-xq-include": "^1.0.18",
-		"xq-banner": "^1.0.7"
+		"xq-banner": "^1.0.8"
 	}
 }

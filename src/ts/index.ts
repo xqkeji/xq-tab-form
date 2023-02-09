@@ -1,6 +1,6 @@
 import {
     domReady
-} from './xq-util'
+} from 'xq-util'
 import xqTabForm from "./xq-tab-form";
 
 domReady(() => {

@@ -1,7 +1,7 @@
 import {
   domReady,
   parents
-} from './xq-util'
+} from 'xq-util'
 
 const XQ_TAB_FORM_CLASS = '.xq-tab-form'
 const xqTabForm=()=>{
