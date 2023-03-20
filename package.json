@@ -19,7 +19,7 @@
 		"dev": "vite serve src/",
 		"html": "vite build src/",
 		"build": "npx unbuild && npm run convert && npm run min && npx xq-banner",
-		"convert": "rollup ./dist/index.cjs --format iife --file ./dist/xq-tab-form.js",
+		"convert": "esbuild ./src/ts/index.ts --outfile=./dist/js/xq-tab-form.js --bundle",
 		"min": "uglifyjs ./dist/xq-tab-form.js -m -o ./dist/xq-tab-form.min.js"
 	},
 	"repository": {
