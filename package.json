@@ -1,6 +1,6 @@
 {
 	"name": "xq-tab-form",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "一个基于Bootstrap5的Tab标签页的小组件，能让HTML5表单验证的提示信息在Bootstrap5的Tab标签页能正常显示。",
 	"files": [
 		"dist"
@@ -20,7 +20,7 @@
 		"html": "vite build src/",
 		"build": "npx unbuild && npm run convert && npm run min && npx xq-banner",
 		"convert": "esbuild ./src/ts/index.ts --outfile=./dist/js/xq-tab-form.js --bundle",
-		"min": "uglifyjs ./dist/xq-tab-form.js -m -o ./dist/xq-tab-form.min.js"
+		"min": "uglifyjs ./dist/js/xq-tab-form.js -m -o ./dist/js/xq-tab-form.min.js"
 	},
 	"repository": {
 		"type": "git",

@@ -1,27 +1,10 @@
 /*!
- * xq-tab-form v1.0.4 (https://xqkeji.cn/demo/xq-tab-form/)
+ * xq-tab-form v1.0.5 (https://xqkeji.cn/demo/xq-tab-form/)
  * Author xqkeji.cn
  * LICENSE SSPL-1.0
  * Copyright 2023 xqkeji.cn
  */
- const domReady = (callBack) => {
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", callBack);
-  } else {
-    callBack();
-  }
-};
-const parents = (element, selector) => {
-  const parents2 = [];
-  let ancestor = element.parentNode;
-  while (ancestor && ancestor.nodeType === Node.ELEMENT_NODE && ancestor.nodeType !== 3) {
-    if (ancestor.matches(selector)) {
-      parents2.push(ancestor);
-    }
-    ancestor = ancestor.parentNode;
-  }
-  return parents2;
-};
+ import { parents, domReady } from 'xq-util';
 
 const XQ_TAB_FORM_CLASS = ".xq-tab-form";
 const xqTabForm = () => {
