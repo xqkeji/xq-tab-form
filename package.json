@@ -36,7 +36,7 @@
     "表单验证"
   ],
   "author": "xqkeji.cn",
-  "license": "Apache-2.0",
+  "license": "AGPL-3.0",
   "homepage": "https://xqkeji.cn/demo/xq-tab-form/",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
