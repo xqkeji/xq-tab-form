@@ -1,7 +1,7 @@
 /*!
  * xq-tab-form v1.0.5 (https://xqkeji.cn/demo/xq-tab-form/)
  * Author xqkeji.cn
- * LICENSE AGPL-3.0
+ * LICENSE AGPL-3.0-only
  * Copyright 2023 xqkeji.cn
  */
  "use strict";
